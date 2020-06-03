@@ -1,0 +1,84 @@
+.app{
+  display: flex;
+}
+
+.app-content {
+  background-image: url("../images/backg_img.png");
+  width: 82vw;
+  height: 140vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #4a4a49;
+  height: 5vw;
+  margin: 0;
+}
+
+.app-title {
+  margin-left: 1.8vw;
+  h2{
+    font-size: 1.8em;
+    font-family: Charmonman, sans-serif;
+    .app-title__first{
+      color: white;
+      font-weight: 100;
+    }
+    .app-title__second{
+      color: #E58A20;
+      font-weight: 700;
+    }
+  }
+}
+
+.profile {
+  margin-right: 3.6vw;
+  display: flex;
+  align-items: center;
+}
+.user-name{
+  font-family: "Open Sans",sans-serif;
+  font-size: 1.8em;
+  color: #FFFFFA;
+}
+.fa-user-circle{
+  margin-left: 1vw;
+  color: #E58A20;
+  font-size: 2.5em;
+}
+.app-menu{
+  width: 18vw;
+  height: 140vh;
+  background-color: #5B605F;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    svg {
+      fill: #E58A20;
+      padding-right: 2vw;
+      display: none;
+
+    }
+  }
+}
+.app-menu-btn{
+  display: inline-block;
+  width: 100%;
+  height: 2vw;
+  font-size: 1.8em;
+}
+.app-menu-link {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  padding: 2vw;
+  color: #FFFFFA;
+  position: relative;
+
+  &:hover {
+    border-left: 3px solid #E58A20;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Przepisy - Zaplanuj Jedzonko</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css?family=Charmonman:400,700|Open+Sans:400,700&display=swap&subset=latin-ext"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header class="app-header">
+    <div class="app-title">
+      <a class="header-link" href="index.html#welcome1">
+    <h2>
+      <span class="app-title__first">Zaplanuj</span>
+      <span class="app-title__second">Jedzonko</span>
+    </h2>
+    </a>
+    </div>
+    <div class="profile">
+      <span class="user-name">Imię</span>
+      <i class="fas fa-user-circle"></i>
+    </div>
+  </header>
+  <div class="app">
+
+    <!-- To jest menu aplikacji -->
+
+    <div class="app-menu">
+      <div><a href="app.html" class="app-menu-link app-menu-btn">Pulpit</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+        </svg>
+      </div>
+      <div><a href="recipes.html" class="app-menu-link app-menu-btn">Przepisy</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+        </svg>
+      </div>
+      <div><a href="schedules.html" class="app-menu-link app-menu-btn">Plany</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+        </svg>
+      </div>
+    </div>
+    <!-- To jest koniec menu aplikacji -->
+
+
+    <!-- To jest kontener zawartości aplikacji -->
+    <div class="app-content">
+      <div class="app-content-with-name">
+        <div class="app-recipes">
+          <div class="app-recipes-title">
+            <h2>Twoje <span></span> przepisy:</h2>
+          </div>
+          <table class="recipes-table" id="recipes-table">
+            <tr>
+              <th>ID</th>
+              <th>Nazwa</th>
+              <th>Opis</th>
+              <th>Akcje</th>
+            </tr>
+
+          </table>
+
+        </div>
+
+
+      </div>
+    </div>
+    <!-- ^-- To jest koniec kontenera zawartości aplikacji -->
+  </div>
+  <!-- Początek popup edycja przepisu-->
+  <div id="edit-recipe" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+
+        <!-- Edycja przepisu-->
+        <section class="form">
+          <form class="form-recipe">
+            <h1>edycja przepisu</h1>
+            <input type="submit" class="submit-btn" value="zapisz i zamknij">
+            <h2>nazwa przepisu</h2>
+            <label>
+              <input alt="" type="text" class="text-input">
+            </label>
+            <h2>opis przepisu</h2>
+            <label>
+              <textarea class="recipe-textarea-first"></textarea>
+            </label>
+          </form>
+          <div class="recipe-all">
+            <div class="recipe-instruction">
+              <h1>instrukcje</h1>
+              <form class="form-recipe-first">
+                <label>
+                  <textarea class="recipe-textarea-second"></textarea>
+                </label>
+                <input type="submit" class="plus-btn-first">
+              </form>
+
+              <div class="recipe-text">
+                <ol>
+                  <li>
+                    <span>przykładowy tekst</span>
+                    <button class="recipe-button-trash">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none"
+                          d="M17.004 20L17.003 8h-1-8-1v12H17.004zM13.003 10h2v8h-2V10zM9.003 10h2v8h-2V10zM9.003 4H15.003V6H9.003z" />
+                        <path
+                          d="M5.003,20c0,1.103,0.897,2,2,2h10c1.103,0,2-0.897,2-2V8h2V6h-3h-1V4c0-1.103-0.897-2-2-2h-6c-1.103,0-2,0.897-2,2v2h-1h-3 v2h2V20z M9.003,4h6v2h-6V4z M8.003,8h8h1l0.001,12H7.003V8H8.003z" />
+                        <path d="M9.003 10H11.003V18H9.003zM13.003 10H15.003V18H13.003z" /></svg>
+                      <button class="recipe-button-edit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path d="M13.771 9.123L12.372 7.725 8.503 11.589 8.503 12.987 9.901 12.987z" />
+                          <path transform="rotate(45.001 14.264 7.232)" d="M13.275 6.478H15.253V7.987H13.275z" />
+                          <path
+                            d="M20,2H4C2.897,2,2,2.897,2,4v18l5.333-4H20c1.103,0,2-0.897,2-2V4C22,2.897,21.103,2,20,2z M20,16H6.667L4,18V4h16V16z" />
+                        </svg>
+                      </button>
+                    </button>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="recipe-ingredients">
+              <h1>składniki</h1>
+              <form class="form-recipe-second">
+                <label>
+                  <input type="text" class="recipe-textarea-third">
+                </label>
+                <input type="submit" class="plus-btn-second">
+
+              </form>
+              <div class="recipe-text-first">
+                <ul>
+                  <li>
+                    <span>przykładowy tekst</span>
+                    <button class="recipe-button-trash-first">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none"
+                          d="M17.004 20L17.003 8h-1-8-1v12H17.004zM13.003 10h2v8h-2V10zM9.003 10h2v8h-2V10zM9.003 4H15.003V6H9.003z" />
+                        <path
+                          d="M5.003,20c0,1.103,0.897,2,2,2h10c1.103,0,2-0.897,2-2V8h2V6h-3h-1V4c0-1.103-0.897-2-2-2h-6c-1.103,0-2,0.897-2,2v2h-1h-3 v2h2V20z M9.003,4h6v2h-6V4z M8.003,8h8h1l0.001,12H7.003V8H8.003z" />
+                        <path d="M9.003 10H11.003V18H9.003zM13.003 10H15.003V18H13.003z" /></svg>
+                    </button>
+                    <button class="recipe-button-edit-first">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M13.771 9.123L12.372 7.725 8.503 11.589 8.503 12.987 9.901 12.987z" />
+                        <path transform="rotate(45.001 14.264 7.232)" d="M13.275 6.478H15.253V7.987H13.275z" />
+                        <path
+                          d="M20,2H4C2.897,2,2,2.897,2,4v18l5.333-4H20c1.103,0,2-0.897,2-2V4C22,2.897,21.103,2,20,2z M20,16H6.667L4,18V4h16V16z" />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Koniec edycja przepisu-->
+
+
+
+      </div>
+    </div>
+  </div>
+  <!-- Koniec Popup edycja przepisu-->
+
+
+
+
+
+  </div>
+
+  <script src="./js/recipes.js"></script>
+
+</body>
+
+</html>

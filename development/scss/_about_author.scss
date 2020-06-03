@@ -1,0 +1,29 @@
+.about {
+  margin: 80px auto 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-img {
+  height: 25vw;
+  width: 25vw;
+  background-image: url("../images/elderly-woman-in-white-button-up-shirt-cooked-a-delicious-3785693.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about-text {
+  width: 50vw;
+  margin-left: 5em;
+  font-family: "Open Sans" ,sans-serif;
+  color: #4a4a49;
+
+}
+h3 {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.about-text p {
+  margin-top: 3vw;
+}

@@ -1,0 +1,93 @@
+@mixin footer-fonts{
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+.footer-container{
+  width: 100%;
+  background: map_get($colors, LightGray);
+  .footer-columns{
+    margin: 110px auto 0;
+    display: flex;
+    justify-content: center;
+    .footer-col{
+      width: 330px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1{
+        @include footer-fonts;
+        color: map_get($colors, white);
+      }
+      p{
+        @include footer-fonts;
+        color: map_get($colors, white);
+        word-spacing: 3px;
+        font-size: 14px;
+      }
+      ul {
+        list-style-type: unset;
+        li {
+          @include footer-fonts;
+          color: map_get($colors, white);
+          word-spacing: 2px;
+          padding: 5px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.form-row{
+  display: flex;
+  .form{
+    input{
+      outline: none;
+      margin: 0;
+      padding: 0px 10px;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+      height: 37px;
+
+    }
+
+  }
+  .form-btn{
+
+    @include footer-fonts;
+    font-weight: bold;
+    background: map_get($colors, orange);
+    color: map_get($colors, white);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 37px;
+  }
+}
+.footer-icons{
+  margin: 5px;
+}
+.svg-icons{
+  padding: 25px;
+}
+.copyright-container{
+  display: flex;
+  justify-content: center;
+  background: map_get($colors, gray);
+  .footer-copyright{
+    padding: 20px;
+    .copy-text{
+      color: map_get($colors, white);
+      @include footer-fonts;
+    }
+    .link-text{
+      color: map_get($colors, orange);
+      @include footer-fonts;
+      margin: 2px;
+      font-size: 14px;
+    }
+  }
+}

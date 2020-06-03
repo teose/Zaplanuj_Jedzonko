@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Zaplanuj Jedzonko</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link
+            href="https://fonts.googleapis.com/css?family=Charmonman:400,700|Open+Sans:400,700&display=swap&subset=latin-ext"
+            rel="stylesheet">
+</head>
+
+<body>
+<header class="app-header" id="welcome" >
+    <div class="app-title">
+        <a class="header-link" href="index.html#welcome1">
+        <h2>
+            <span class="app-title__first">Zaplanuj</span>
+            <span class="app-title__second">Jedzonko</span>
+        </h2>
+        </a>
+    </div>
+    <div class="profile">
+        <span class="user-name">Imię</span>
+        <i class="fas fa-user-circle"></i>
+    </div>
+</header>
+<div class="app">
+
+    <div class="app-menu">
+        <div><a href="app.html" class="app-menu-link app-menu-btn">Pulpit</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+            </svg>
+        </div>
+        <div><a href="recipes.html" class="app-menu-link app-menu-btn">Przepisy</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+            </svg>
+        </div>
+        <div><a href="schedules.html" class="app-menu-link app-menu-btn">Plany</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+            </svg>
+        </div>
+    </div>
+    <div class="app-content">
+        <div class="app-welcome" >
+            <h1>Witaj,</h1>
+            <h2>wygląda na to że jesteś<br>
+                tutaj pierwszy raz!
+            </h2>
+            <form>
+                <label>
+                    <input class="app-welcome-name" type="text" alt="" placeholder="  tutaj wpisz jak masz na imię">
+                </label>
+                <label>
+                    <input class="app-welcome-submit" type="submit" alt="" value="Gotowe!">
+                </label>
+            </form>
+            <p>
+                Podaj nam swoje imię, a my <br>
+                zorganizujemy dla Ciebe naszą aplikację<br>
+                :)
+            </p>
+        </div>
+
+        <!-- To jest kontener na pulpit po zalogowaniu -->
+        <div class="app-content-with-name">
+            <div class="app-cont-nav">
+                <div class="app-cont-btns">
+                    <a href="#popup-recipe" class="app-cont-btn" id="recipe">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M5,21h14c1.104,0,2-0.896,2-2V5c0-1.104-0.896-2-2-2H5C3.896,3,3,3.896,3,5v14C3,20.104,3.896,21,5,21z M7,11h4V7h2v4h4v2 h-4v4h-2v-4H7V11z"/>
+                        </svg>
+                        <p>przepis</p>
+
+                    </a>
+                    <a href="#popup-plan" class="app-cont-btn" id="plan">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M5,21h14c1.104,0,2-0.896,2-2V5c0-1.104-0.896-2-2-2H5C3.896,3,3,3.896,3,5v14C3,20.104,3.896,21,5,21z M7,11h4V7h2v4h4v2 h-4v4h-2v-4H7V11z"/>
+                        </svg>
+                        <p>plan</p>
+                    </a>
+                    <a href="#popup-shop" class="app-cont-btn" id="shop">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M5,21h14c1.104,0,2-0.896,2-2V5c0-1.104-0.896-2-2-2H5C3.896,3,3,3.896,3,5v14C3,20.104,3.896,21,5,21z M7,11h4V7h2v4h4v2 h-4v4h-2v-4H7V11z"/>
+                        </svg>
+                        <p>zakupy</p>
+                    </a>
+                </div>
+                <div class="app-cont-notif">
+                    <div class="app-cont-box app-cont-inform">
+                        <div class="app-cont-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-.001 5.75c.69 0 1.251.56 1.251 1.25s-.561 1.25-1.251 1.25-1.249-.56-1.249-1.25.559-1.25 1.249-1.25zm2.001 12.25h-4v-1c.484-.179 1-.201 1-.735v-4.467c0-.534-.516-.618-1-.797v-1h3v6.265c0 .535.517.558 1 .735v.999z"/>
+                            </svg>
+                        </div>
+                        <p>Masz już <span class="app-cont-numberRecipe">99</span> przepisów, nieźle!</p>
+                        <div class="app-cont-closeIco">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="app-cont-box app-cont-warning">
+                        <div class="app-cont-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 5h2v10h-2v-10zm1 14.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z"/>
+                            </svg>
+                        </div>
+                        <p>Pamiętaj, aby dodać plan!</p>
+                        <div class="app-cont-closeIco">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="app-cont-box app-cont-success">
+                        <div class="app-cont-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                            </svg>
+                        </div>
+                        <p>Świetnie że jesteś! Udanego planowania i smaczego! :)</p>
+                        <div class="app-cont-closeIco">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+                <div class="app-content-table">
+                    <!-- tu będzie tabela -->
+                    <h2>Twój plan na <span class='span-week-number'>{nr_tygodnia}</span> tydzień:</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>ŚNIADANIE</th>
+                            <th>DRUGIE ŚNIADANIE</th>
+                            <th>ZUPA</th>
+                            <th>DRUGIE DANIE</th>
+                            <th>KOLACJA</th>
+                        </tr>
+                        <tr class='meal'>
+                            <th>PONIEDZIAŁEK</th>
+                            <td>śniadanie</td>
+                            <td>drugie śniadanie</td>
+                            <td>zupa</td>
+                            <td>drugie danie</td>
+                            <td>kolacja</td>
+                                                   </tr>
+                        <tr class='meal'>
+                            <th>WTOREK</th>
+                            <td>śniadanie</td>
+                            <td>drugie śniadanie</td>
+                            <td>zupa</td>
+                            <td>drugie danie</td>
+                            <td>kolacja</td>
+
+                        </tr>
+                        <tr class='meal'>
+                            <th>ŚRODA</th>
+                            <td>śniadanie</td>
+                            <td>drugie śniadanie</td>
+                            <td>zupa</td>
+                            <td>drugie danie</td>
+                            <td>kolacja</td>
+
+                        </tr>
+                        <tr class='meal'>
+                            <th>CZWARTEK</th>
+                            <td>śniadanie</td>
+                            <td>drugie śniadanie</td>
+                            <td>zupa</td>
+                            <td>drugie danie</td>
+                            <td>kolacja</td>
+
+
+                        </tr>
+                        <tr class='meal'>
+                            <th>PIĄTEK</th>
+                            <td>śniadanie</td>
+                            <td>drugie śniadanie</td>
+                            <td>zupa</td>
+                            <td>drugie danie</td>
+                            <td>kolacja</td>
+
+                        </tr>
+                        <tr class='meal'>
+                            <th>SOBOTA</th>
+                            <td>śniadanie</td>
+                            <td>drugie śniadanie</td>
+                            <td>zupa</td>
+                            <td>drugie danie</td>
+                            <td>kolacja</td>
+
+                        </tr>
+                        <tr class='meal td'>
+                            <th>NIEDZIELA</th>
+                            <td>śniadanie</td>
+                            <td>drugie śniadanie</td>
+                            <td>zupa</td>
+                            <td>drugie danie</td>
+                            <td>kolacja</td>
+                        </tr>
+                    </table>
+                    <div class="next-div">
+                        <span class='prev span-nav'>&#x226a; poprzedni</span>
+                        <span class='next span-nav'> następny &#x226b;</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <!-- Koniec kontenera na pulpit po zalogowaniu -->
+
+
+        <!-- Początek popup przepis-->
+        <div id="popup-recipe" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    <form class="form-recipe">
+                        <div class="submit-btn-section">
+                            <h1>Nowy przepis</h1>
+                            <input type="submit" class="save-recipe-btn submit-btn" value="zapisz i zamknij">
+                        </div>
+                        <div class="name-section">
+                            <h2>Nazwa przepisu</h2>
+                            <label>
+                                <input alt="" type="text" class="text-input name-recipe" required>
+                            </label>
+                        </div>
+                        <div class="description-section">
+                            <h2>Opis przepisu</h2>
+                            <label>
+                                <textarea class="recipe-textarea-first description-recipe" required></textarea>
+                            </label>
+                        </div>
+                    </form>
+                        <div class="recipe-all">
+                            <div class="recipe-instruction">
+                                <h2>instrukcje</h2>
+                                <form class="form-recipe-first">
+                                    <label>
+                                        <textarea class="recipe-textarea-second"></textarea>
+                                    </label>
+                                    <input type="submit" class="plus-btn-instructions plus-btn"  value='+'>
+                                </form>
+                                <div class="instructions-list__container">
+                                    <ol class='instructions-list'>
+
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="recipe-ingredients">
+                                <h2>składniki</h2>
+                                <form class="form-recipe-second">
+                                    <label>
+                                        <input type="text" class="recipe-textarea-third">
+                                    </label>
+                                    <input type="submit" class="plus-btn-ingredients plus-btn" value='+'>
+                                </form>
+                                <div class="ingredients-list__container">
+                                    <ul class='ingredients-list'>
+
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+            <!-- Koniec Popup przepis-->
+
+            <!-- Początek popup plan-->
+            <div id="popup-plan" class="overlay">
+                <div class="popup">
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <form class="form-plan">
+                            <label>
+                                <h1>nowy plan</h1>
+                                <input type="submit" class="app-welcome-submit" value="zapisz i zamknij">
+                            </label>
+                            <label>
+                                <h2>nazwa planu</h2>
+                                <input alt="" type="text" class="text-input-plan" required>
+                            </label>
+
+                            <label>
+                                <h2>opis planu</h2>
+                                <textarea class="plan-textarea-first" required></textarea>
+                            </label>
+                            <label>
+                                <h2>numer tygodnia</h2>
+                                <input alt="" type="number" class="plan-input" required>
+                            </label>
+
+
+                            <div class="app-content-table1">
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>śniadanie</th>
+                                        <th>drugie<br>śniadanie</th>
+                                        <th>zupa</th>
+                                        <th>drugie<br>danie</th>
+                                        <th>kolacja</th>
+                                    </tr>
+                                    <tr class='pon day'>
+                                        <th>poniedziałek</th>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr class='wt day'>
+                                        <th>wtorek</th>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr class='sr day'>
+                                        <th>środa</th>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr class='czw day'>
+                                        <th>czwartek</th>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr class='pt day'>
+                                        <th>piątek</th>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr class='sob day'>
+                                        <th>sobota</th>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr class='ndz day'>
+                                        <th>niedziela</th>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <select class="select-form1">
+                                                </select>
+                                            </label>
+                                        </td>
+
+                                    </tr>
+
+                                </table>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Koniec Popup plan-->
+
+
+        <!-- Początek popup zakupy-->
+        <div id="popup-shop" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    Lista zakupów
+                </div>
+            </div>
+        </div>
+        <!-- Koniec Popup zakupy-->
+
+
+    </div>
+</div>
+
+<script src="./js/app.js"></script>
+</body>
+
+</html>

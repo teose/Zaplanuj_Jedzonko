@@ -1,0 +1,80 @@
+.app-recipes{
+  background: white;
+  border: 1px dashed gray;
+  height: auto;
+  width: 70vw;
+  margin: 50px;
+  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+}
+.app-recipes-title{
+  border-bottom: 2px solid #A1A194;
+  width: 100%;
+  padding: 6px;
+  h2{
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #E58A20;
+    font-family: "Open Sans",sans-serif;
+    text-transform: uppercase;
+  }
+}
+.app-recipes-table-actions{
+  display: flex;
+}
+.app-recipes-btn{
+  background: white;
+  height: 25px;
+  width: 25px;
+  margin: 5px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+
+  }
+    .edit{
+      svg{
+        fill: map_get($colors, orange);
+        height: 23px;
+        width: 23px;
+      }
+    }
+    .remove{
+      svg{
+        fill: map_get($colors, darkRed);
+        height: 24px;
+        width: 24px;
+      }
+
+    }
+
+
+.recipes-table{
+  margin-top: 10px;
+  font-family: "Open Sans",sans-serif;
+  margin-bottom: 20px;
+
+  tr {
+    border: 1px solid #A1A194;
+    border-left: 0 none;
+    border-right: 0 none;
+    font-size: 14px;
+    color: #5B605F;
+    padding: 5px;
+  }
+    th{
+      font-size: 18px;
+      font-weight: bold;
+      color: #4a4a49;
+      padding: 5px 15px 5px 15px;
+      text-align: justify;
+
+    }
+    td {
+      padding: 5px 15px 5px 15px;
+    }
+}

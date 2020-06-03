@@ -1,0 +1,401 @@
+.app-content {
+  position: relative;
+}
+
+.app-welcome {
+  // position: absolute;
+  width: 70vw;
+  height: 80vh;
+  border: 1px dotted #4a4a49;
+  background: #FFFFFA;
+  margin: 4vh 6vw 0 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #4a4a49;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+
+
+  h1 {
+    margin-top: 10vh;
+
+  }
+
+  h2 {
+    margin: 3vh 0 3vh 0;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin: 2vh 0 0 0;
+  }
+
+  input {
+    display: block;
+
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.app-welcome-name {
+  width: 18vw;
+  height: 3vh;
+  font-size: 10px;
+
+}
+
+.app-welcome-submit {
+  margin: 2vh;
+  background-color: #E58A20;
+  width: 10vw;
+  height: 6vh;
+  color: #FFFFFA;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+
+/* --------- Zawartość po zalogowaniu -----------*/
+
+.app-content-with-name {
+  height: 95vh;
+
+}
+
+.app-cont-nav {
+  margin: 5px;
+  //border: 1px dashed blue;
+  display: flex;
+  height: 220px;
+  min-width: 1080px;
+  justify-content: center;
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.app-cont-btns {}
+
+.app-cont-btn {
+  background: white;
+  height: 175px;
+  width: 100px;
+  margin: 25px;
+
+  border: 1px dashed map_get($colors, seagreen);
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+  color: map_get($colors, seagreen);
+
+  svg {
+    fill: map_get($colors, seagreen);
+    width: 60px;
+    height: 60px;
+    padding-top: 35px;
+  }
+
+  p {
+    padding-top: 30px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+}
+
+
+.app-cont-notif {
+  margin: 25px 0;
+  height: 175px;
+  flex-direction: column;
+  width: 600px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.app-cont-box {
+  background: white;
+  height: 50px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+
+}
+
+.app-cont-ico {
+  margin: 0 30px 0 10px;
+}
+
+.app-cont-ico svg {
+  width: 35px;
+  height: 35px;
+}
+
+.app-cont-closeIco {
+  margin-right: 3px;
+  margin-left: auto;
+  margin-top: 5px;
+  margin-bottom: auto;
+}
+
+
+.app-cont-inform {
+  border: 1px dashed map_get($colors, blue);
+  color: map_get($colors, blue);
+  fill: map_get($colors, blue);
+}
+
+.app-cont-warning {
+  border: 1px dashed map_get($colors, yellow);
+  color: map_get($colors, yellow);
+  fill: map_get($colors, yellow);
+}
+
+.app-cont-success {
+  border: 1px dashed map_get($colors, seagreen);
+  color: map_get($colors, seagreen);
+  fill: map_get($colors, seagreen);
+}
+
+.app-content-table {
+  background: white;
+  border: 1px dashed gray;
+  height: fit-content;
+  width: 70vw;
+  margin: 1vh 6vw 0 6vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #E58A20;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .next-div {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 12px;
+    color: #E58A20;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 3px;
+
+    span {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  table {
+    margin-top: 10px;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+
+    tr {
+      border: 1px solid #A1A194;
+      border-left: 0 none;
+      border-right: 0 none;
+      font-size: 14px;
+      color: #5B605F;
+      padding: 15px;
+
+
+      th {
+        width: 15%;
+        font-size: 18px;
+        font-weight: bold;
+        color: #4a4a49;
+        padding: 18px;
+
+      }
+
+      td {
+        width: 17%;
+        padding: 18px;
+
+
+      }
+    }
+  }
+}
+
+
+
+
+/*--------------- Popupy ---------------*/
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  width: 80%;
+  height: 500px;
+  position: relative;
+
+}
+
+
+.popup .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .content {
+  max-height: 100%;
+  overflow: auto;
+}
+
+
+
+
+.form-plan {
+  label {
+
+    &:first-child {
+      border-bottom: 1px solid darkgrey;
+      justify-content: space-between;
+    }
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .text-input-plan {
+    width: 70%;
+  }
+
+  .plan-textarea-first {
+    width: 70%;
+  }
+
+  .plan-input {
+    width: 4%;
+  }
+
+  h1 {
+    width: 20%;
+    text-transform: uppercase;
+    color: #E58A20;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+  }
+
+  h2 {
+    padding: 10px;
+    width: 20%;
+    text-transform: capitalize;
+    color: #5B605F;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6em;
+  }
+}
+
+.app-content-table1 {
+  background: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+  .select-form1 {
+    border-radius: 5px;
+    height: 2vw;
+    width: 10vw;
+
+  }
+
+  h2 {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #E58A20;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  table {
+    margin-top: 10px;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+
+
+
+    tr {
+      border-bottom: 1px solid #A1A194;
+      font-size: 14px;
+      color: #5B605F;
+
+      th {
+
+        &:first-child {
+          border-top: none;
+        }
+
+        border-top: 1px solid #A1A194;
+        font-size: 18px;
+        font-weight: bold;
+        color: #4a4a49;
+        padding: 1vh 1vw 1vh 1vw;
+        text-align: center;
+        vertical-align: center;
+        text-transform: uppercase;
+
+
+      }
+
+      td {
+        padding: 1vh 1vw 1vh 1vw;
+
+
+      }
+    }
+  }
+}

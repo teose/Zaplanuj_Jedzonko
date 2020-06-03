@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: map-get($colors, gray);
+  height: 100px;
+  margin: 0;
+}
+
+.header-title {
+  margin-left: 80px;
+  cursor: pointer;
+
+  h1 {
+    font-family: Charmonman;
+
+
+    .header-first {
+      color: white;
+      font-weight: 100;
+    }
+
+    .header-second {
+      color: #E58A20;
+      font-weight: 700;
+    }
+  }
+
+}
+
+.header-link{
+  text-decoration: none;
+  outline: none;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-menu a {
+  font-family: 'Pacifico', cursive;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.header-menu a:hover {
+  color: #E58A20;
+  transition: 1s;
+}
+
+.header-menu ul {
+  display: flex;
+}
+
+.header-menu li {
+  list-style: none;
+  margin: 45px;
+  text-transform: uppercase;
+}
